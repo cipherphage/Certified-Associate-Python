@@ -6,6 +6,10 @@ class Vehicle:
         '''
         Initializer for Vehicle class includes distance_traveled
         and unit
+
+        >>> v = Vehicle()
+        >>> v.description()
+        'A Vehicle that has traveled 0 miles'
         '''
         self.distance_traveled = distance_traveled
         self.unit = unit
