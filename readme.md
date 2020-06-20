@@ -14,5 +14,6 @@ Lambdas Higher-order functions Modules Packages Classes and objects Exceptions A
 
 ## Repository notes:
 - I may not include all hands-on modules and some of the ones I have included in the repository may not contain necessary data such as pre-populated sqlite database files, etc.
+- Sometimes I modify the examples from the course, but usually my modifications are just additional comments, docstrings and doctests.
 
 [1]:https://linuxacademy.com/course/certified-associate-in-python-programming-certification/
