@@ -13,6 +13,6 @@ Throughout this course we cover:
 Lambdas Higher-order functions Modules Packages Classes and objects Exceptions Assertions File IO
 
 ## Repository notes:
-- I may not include all hands-on modules and some of the ones I have included in the repository may not contain necessary data such pre-populated sqlite database files, etc.
+- I may not include all hands-on modules and some of the ones I have included in the repository may not contain necessary data such as pre-populated sqlite database files, etc.
 
 [1]:https://linuxacademy.com/course/certified-associate-in-python-programming-certification/
