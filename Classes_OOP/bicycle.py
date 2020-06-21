@@ -2,7 +2,7 @@ from vehicle import Vehicle
 
 class Bicycle(Vehicle):
     '''
-    Bicycle models a vehicle w/ tires and an engine.
+    Bicycle models a vehicle w/ tires and no engine.
     It inherits from the Vehicle class.
 
     >>> b = Bicycle()
@@ -27,9 +27,18 @@ class Bicycle(Vehicle):
         initial = super().description()
         return f"{initial} on {len(self.tires)} tires"
 
+    def pedal(self, distance):
+        '''
+        Advances the distance traveled by the bicycle
+        '''
+        self.distance_traveled += distance
+
+    def __str__(self):
+        return f"<{self.__class__.__name__} {self.__dict__}>"
+
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
 
-    bike = Bicycle()
-    print(bike.description())
+    b = Bicycle()
+    print(b.description())
