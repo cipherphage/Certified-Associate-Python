@@ -1,19 +1,6 @@
 class Employee:
     default_db_file = "employee_file.txt"
 
-    def __init__(self, name, email_address, title, phone_number=None, identifier=None):
-        self.name = name
-        self.email_address = email_address
-        self.title = title
-        self.phone_number = phone_number
-        self.identifier = identifier
-
-    def email_signature(self, include_phone=False):
-        signature = f"{self.name} - {self.title}\n{self.email_address}"
-        if include_phone and self.phone_number:
-            signature += f" ({self.phone_number})"
-        return signature
-
     @classmethod
     def get_all(cls, file_name=None):
         results = []
@@ -41,6 +28,19 @@ class Employee:
             line = f.readlines()[line_num - 1]
             attrs = line.strip('\n').split(',') + [line_num]
             return cls(*attrs)
+
+    def __init__(self, name, email_address, title, phone_number=None, identifier=None):
+        self.name = name
+        self.email_address = email_address
+        self.title = title
+        self.phone_number = phone_number
+        self.identifier = identifier
+
+    def email_signature(self, include_phone=False):
+        signature = f"{self.name} - {self.title}\n{self.email_address}"
+        if include_phone and self.phone_number:
+            signature += f" ({self.phone_number})"
+        return signature
 
     def save(self, file_name=None):
         if not file_name:
